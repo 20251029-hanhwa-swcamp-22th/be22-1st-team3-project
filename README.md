@@ -24,7 +24,7 @@
 - 요구 사항 명세서 (이미지 또는 전체 공개된 url)
 > https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing
 - ERD (이미지)
-> ![ERD](assets/team3_erd.png)
+> ![ERD](assets/team3_erd_final.png)
 - 테이블 정의서(이미지 또는 전체 공개된 url)
 > 작업 필요
 - 백업 계획
