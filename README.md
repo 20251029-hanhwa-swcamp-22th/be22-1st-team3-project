@@ -22,7 +22,7 @@
 - Usecase Diagram (이미지 캡쳐)
 > ![usecase](assets/team3_usecase.png)
 - 요구 사항 명세서 (이미지 또는 전체 공개된 url)
-> ![요구사항 명세서](https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing)
+> https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing
 - ERD (이미지)
 > ![ERD](assets/team3_erd.png)
 - 테이블 정의서(이미지 또는 전체 공개된 url)
