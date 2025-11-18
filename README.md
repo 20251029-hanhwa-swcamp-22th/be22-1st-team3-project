@@ -123,9 +123,101 @@
 
 ---
 
-# 테스트케이스
+# 테스트 케이스
 
-> 작업 필요
+## 1. Admin Management User
+<details>
+<summary>결과 보기</summary>
+
+![admin_manegement_user-1](media/testResult/admin_manegement_user/admin_manegement_user-1.png)  
+![admin_manegement_user-2](media/testResult/admin_manegement_user/admin_manegement_user-2.png)  
+
+</details>
+
+## 2. Admin Register
+<details>
+<summary>결과 보기</summary>
+
+![admin_register-1](media/testResult/admin_register/admin_register-1.png)  
+![admin_register-2](media/testResult/admin_register/admin_register-2.png)  
+
+</details>
+
+## 3. Create Routine
+<details>
+<summary>결과 보기</summary>
+
+![create_routine-1](media/testResult/create_routine/create_routine-1.png)  
+![create_routine-2](media/testResult/create_routine/create_routine-2.png)  
+
+</details>
+
+## 4. Diet Plan
+<details>
+<summary>결과 보기</summary>
+
+![diet_plan-1](media/testResult/diet_plan/diet_plan-1.png)  
+![diet_plan-2](media/testResult/diet_plan/diet_plan-2.png)  
+![diet_plan-3](media/testResult/diet_plan/diet_plan-3.png)  
+![diet_plan-4](media/testResult/diet_plan/diet_plan-4.png)  
+
+</details>
+
+## 5. Exercise Guide Select
+<details>
+<summary>결과 보기</summary>
+
+![exercise_guide_select-1](media/testResult/exercise_guide_select/exercise_guide_select-1.png)  
+![exercise_guide_select-2](media/testResult/exercise_guide_select/exercise_guide_select-2.png)  
+
+</details>
+
+## 6. Group Chatting
+<details>
+<summary>결과 보기</summary>
+
+![group_chatting-1](media/testResult/group_chatting/group_chatting-1.png)  
+![group_chatting-2](media/testResult/group_chatting/group_chatting-2.png)  
+
+</details>
+
+## 7. Pain Survey
+<details>
+<summary>결과 보기</summary>
+
+![pain_survery-1](media/testResult/pain_survery/pain_survery-1.png)  
+![pain_survery-2](media/testResult/pain_survery/pain_survery-2.png)  
+
+</details>
+
+## 8. Report User
+<details>
+<summary>결과 보기</summary>
+
+![report_user-1](media/testResult/report_user/report_user-1.png)  
+
+</details>
+
+## 9. Routine Plan
+<details>
+<summary>결과 보기</summary>
+
+![routine_plan-1](media/testResult/routine_plan/routine_plan-1.png)  
+![routine_plan-2](media/testResult/routine_plan/routine_plan-2.png)  
+
+</details>
+
+## 10. User Register
+<details>
+<summary>결과 보기</summary>
+
+![user_register-1](media/testResult/user_register/user_register-1.png)  
+![user_register-2](media/testResult/user_register/user_register-2.png)  
+![user_register-3](media/testResult/user_register/user_register-3.png)  
+![user_register-4](media/testResult/user_register/user_register-4.png)  
+![user_register-5](media/testResult/user_register/user_register-5.png)  
+
+</details>
 
 ---
 
