@@ -170,6 +170,194 @@ FROM routinerecord;
 
 ROLLBACK;
 
+# 6. 식단 관리
+    # (1) 아침 식단 생성
+INSERT INTO Diet (diet_date, diet_type, diet_memo, diet_user_num)
+VALUES (NOW(), '조식', NULL, 6);
+
+SET @breakfast_diet_num = LAST_INSERT_ID();
+
+    # 아침 식단 생성 확인
+SELECT * FROM Diet WHERE diet_num = @breakfast_diet_num;
+
+    # (2) 아침 식단에 넣을 음식 검색
+SET @salad_food_num = (
+    SELECT food_num
+    FROM Food
+    WHERE food_name = '닭가슴살'
+    LIMIT 1
+);
+
+        #아침 식단 넣을 음식 검색 확인
+SELECT @salad_food_num AS '닭가슴살 food_num';
+
+
+        # (3) 아침 식단에 추가
+INSERT INTO DietItem (item_amount, diet_num, food_num)
+VALUES (150, @breakfast_diet_num, @salad_food_num);
+
+        # 아침 식단 항목 조회
+SELECT * FROM DietItem WHERE diet_num = @breakfast_diet_num;
+
+
+        # (4) '점심' 식단 생성
+INSERT INTO Diet (diet_date, diet_type, diet_memo, diet_user_num)
+VALUES (NOW(), '중식', NULL, 6);
+SET @lunch_diet_num = LAST_INSERT_ID();
+
+        # 점심 식단 생성 확인
+SELECT * FROM Diet WHERE diet_num = @lunch_diet_num;
+
+        # 2. 새로운 음식 등록
+INSERT INTO Food (food_name, food_kcal, food_protein, food_cerb, food_fat, food_weight)
+VALUES ('특제 프로틴 쉐이크', 300, 30, 15, 5, '300g');
+
+SET @protein_food_num = LAST_INSERT_ID();
+
+        #   등록된 커스텀 음식 조회
+SELECT * FROM Food WHERE food_num = @protein_food_num;
+
+
+        # (1) 점심 식단에 특제 프로틴 쉐이크 추가
+INSERT INTO DietItem (item_amount, diet_num, food_num)
+VALUES (300, @lunch_diet_num, @protein_food_num);
+
+
+        # 점심 식단 아이템 조회
+SELECT * FROM DietItem WHERE diet_num = @lunch_diet_num;
+
+
+        # 3. 아침 식단 수정
+
+SET @breakfast_item_num = (
+    SELECT item_num
+    FROM DietItem
+    WHERE diet_num = @breakfast_diet_num
+    LIMIT 1
+);
+
+UPDATE DietItem
+SET item_amount = 180
+WHERE item_num = @breakfast_item_num;
+
+
+        # 아침 식단 수정된 아이템 조회
+SELECT * FROM DietItem WHERE item_num = @breakfast_item_num;
+
+        # 4. 저녁 식단 생성 → 삭제
+INSERT INTO Diet (diet_date, diet_type, diet_memo, diet_user_num)
+VALUES (NOW(), '석식', NULL, 6);
+
+SET @dinner_diet_num = LAST_INSERT_ID();
+
+        # 저녁 식단 생성 조회
+SELECT * FROM Diet WHERE diet_num = @dinner_diet_num;
+DELETE FROM DietItem
+WHERE diet_num = @dinner_diet_num;
+
+        # 저녁 식단 상세가 없는지 확인
+SELECT * FROM DietItem WHERE diet_num = @dinner_diet_num;
+
+        # 자체 삭제
+DELETE FROM Diet
+WHERE diet_num = @dinner_diet_num;
+
+    # 5. 전체 결과 조회
+SELECT
+    D.diet_num,
+    D.diet_type,
+    F.food_name,
+    DI.item_amount
+FROM Diet D
+LEFT JOIN DietItem DI ON D.diet_num = DI.diet_num
+LEFT JOIN Food F ON DI.food_num = F.food_num
+WHERE D.diet_user_num = 6
+ORDER BY D.diet_num;
+
+#  7. 통증 설문
+--    (1) 설문지 조회
+SELECT * FROM Svy;
+
+--     (2) 설문 문항 조회
+SELECT * FROM SvyQst WHERE survey_code = 1;
+
+--      (3) 설문 옵션 조회
+SELECT * FROM SvyQstOpt WHERE question_num IN (
+    SELECT question_num FROM SvyQst WHERE survey_code = 1
+);
+
+--      (4) 설문 제출
+INSERT INTO SvyRecord (create_date, result, user_num, survey_code)
+VALUES (NOW(), '진단 결과 생성 전', 6, 1);
+
+SELECT LAST_INSERT_ID() AS survey_num;
+
+--      (5) 설문 상세
+INSERT INTO SvyDtlRec (survey_num, option_num, question_num)
+VALUES
+    (LAST_INSERT_ID(), 3, 1),
+    (LAST_INSERT_ID(), 12, 2),
+    (LAST_INSERT_ID(), 22, 3);
+
+--       (6) 설문 결과 업데이트
+UPDATE SvyRecord
+SET result = '무릎 통증이 있으며 운동 후 통증 증가. 휴식 권장.'
+WHERE survey_num = LAST_INSERT_ID();
+
+--       (7) 설문 결과 조회
+SELECT survey_num, create_date, result
+FROM SvyRecord
+WHERE user_num = 6
+ORDER BY survey_num DESC
+LIMIT 1;
+
+
+#  8. 그룹 채팅
+
+    -- 테스트용 사용자 변수
+SET @userA = 6;   -- 사용자 A
+SET @userB = 7;   -- 사용자 B
+
+#   (1) 채팅방 생성
+INSERT INTO Gct (room_master, room_name, room_open_date)
+VALUES (@userA, '무릎 통증 환우회', NOW());
+
+SET @room_num = LAST_INSERT_ID();
+
+
+
+#   (2) 채팅방 참여자 등록 (A: 방장)
+INSERT INTO GctPtc (room_num, user_num)
+VALUES (@room_num, @userA);
+
+
+#   (3) 사용자 B 초대
+INSERT INTO GctPtc (room_num, user_num)
+VALUES (@room_num, @userB);
+
+
+
+#   (4) 사용자 A 메시지 전송
+INSERT INTO Msg (msg_content, msg_time, room_num, user_num)
+VALUES ('오늘 스쿼트했더니 무릎이 아프네요', NOW(), @room_num, @userA);
+
+SET @msg_num = LAST_INSERT_ID();
+
+
+
+#   (5) 신고 (A가 B가 보낸 메시지를 신고했다고 가정)
+
+INSERT INTO Report (rpt_time, rpt_reason, msg_num, good_num)
+VALUES (NOW(), '부적절한 메시지 전송', @msg_num, @userA);
+
+
+
+#   (6) 사용자 A 채팅방 나가기
+
+DELETE FROM GctPtc
+WHERE room_num = @room_num
+  AND user_num = @userA;
+
 # 9. 관리자 로그인 -> 신고 메시지 조회
 select *
 from adm;
