@@ -1,7 +1,9 @@
 # 9. 관리자 로그인 -> 신고 메시지 조회
+start transaction ;
 select *
 from adm;
-
+insert into adm(adm_id, adm_pw, adm_name)
+values ('admin', 123,'name');
 -- 1) 로그인
 --   (1) 없는 아이디 로그인시도 -> 실패
 select *
@@ -26,3 +28,8 @@ select *
 from report r
          join msg m
 where r.msg_num = m.msg_num;
+
+--   (2) 회원탈퇴
+# DELETE 구문이라 주석처리 해두었습니다. user 복구를 위해 정보를 저장해두고 시행 바랍니다.
+# DELETE FROM mem
+# WHERE user_num = '1';

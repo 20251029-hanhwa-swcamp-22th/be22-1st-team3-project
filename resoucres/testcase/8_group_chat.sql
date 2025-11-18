@@ -10,7 +10,7 @@ VALUES (@userA, '무릎 통증 환우회', NOW());
 
 SET @room_num = LAST_INSERT_ID();
 
-
+SELECT  * FROM gctptc
 
 #   (2) 채팅방 참여자 등록 (A: 방장)
 INSERT INTO GctPtc (room_num, user_num)
@@ -27,6 +27,7 @@ VALUES (@room_num, @userB);
 INSERT INTO Msg (msg_content, msg_time, room_num, user_num)
 VALUES ('오늘 스쿼트했더니 무릎이 아프네요', NOW(), @room_num, @userA);
 
+SELECT * FROM msg;
 SET @msg_num = LAST_INSERT_ID();
 
 
@@ -36,10 +37,9 @@ SET @msg_num = LAST_INSERT_ID();
 INSERT INTO Report (rpt_time, rpt_reason, msg_num, good_num)
 VALUES (NOW(), '부적절한 메시지 전송', @msg_num, @userA);
 
-
-
 #   (6) 사용자 A 채팅방 나가기
-
 DELETE FROM GctPtc
 WHERE room_num = @room_num
   AND user_num = @userA;
+
+select * from gctptc;

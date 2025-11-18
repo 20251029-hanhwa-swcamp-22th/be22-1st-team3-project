@@ -19,9 +19,9 @@ SELECT AVG(CASE WHEN user_join_date > '2025-01-18' THEN 100.0 ELSE 0.0 END) AS p
 FROM mem;
 
 --   (2) 운동 필요한 사람의 수 계산
-select count(*)
+select count(*) "운동 필요한 사람의 수"
 from mem
-where (user_weight < 60.0 and user_height > 165.0)
+where  (user_weight < 60.0 and user_height > 165.0)
    or (user_weight > 80.0 and user_height < 180.0);
 
 -- 3) 회원 탈퇴
@@ -30,8 +30,17 @@ select *
 from report r
          join msg m
 where r.msg_num = m.msg_num;
+ select * from mem;
+DELETE FROM mem
+WHERE user_num = 40;
 
+start transaction ;
+
+select * from mem;
 --   (2) 회원탈퇴
 # DELETE 구문이라 주석처리 해두었습니다. user 복구를 위해 정보를 저장해두고 시행 바랍니다.
-# DELETE FROM mem
-# WHERE user_num = '1';
+ DELETE FROM mem
+ WHERE user_phone = '010-6666-6666';
+
+select * from mem;
+rollback;

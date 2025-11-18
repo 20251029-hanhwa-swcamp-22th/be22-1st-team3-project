@@ -33,6 +33,8 @@ INSERT INTO Diet (diet_date, diet_type, diet_memo, diet_user_num)
 VALUES (NOW(), '중식', NULL, 6);
 SET @lunch_diet_num = LAST_INSERT_ID();
 
+SELECT * FROM diet;
+
         # 점심 식단 생성 확인
 SELECT * FROM Diet WHERE diet_num = @lunch_diet_num;
 
@@ -64,6 +66,7 @@ SET @breakfast_item_num = (
     LIMIT 1
 );
 
+
 UPDATE DietItem
 SET item_amount = 180
 WHERE item_num = @breakfast_item_num;
@@ -86,6 +89,7 @@ WHERE diet_num = @dinner_diet_num;
         # 저녁 식단 상세가 없는지 확인
 SELECT * FROM DietItem WHERE diet_num = @dinner_diet_num;
 
+SELECT * FROM diet;
         # 자체 삭제
 DELETE FROM Diet
 WHERE diet_num = @dinner_diet_num;
@@ -101,3 +105,5 @@ LEFT JOIN DietItem DI ON D.diet_num = DI.diet_num
 LEFT JOIN Food F ON DI.food_num = F.food_num
 WHERE D.diet_user_num = 6
 ORDER BY D.diet_num;
+
+select * from dietitem;

@@ -16,6 +16,8 @@ VALUES (NOW(), '진단 결과 생성 전', 6, 1);
 
 SELECT LAST_INSERT_ID() AS survey_num;
 
+select * FROM svyrecord;
+
 --      (5) 설문 상세
 INSERT INTO SvyDtlRec (survey_num, option_num, question_num)
 VALUES
