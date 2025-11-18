@@ -22,7 +22,7 @@
 ---
 
 # 유사 서비스 + 차이점 or 개선점
-> ![diffrence_about_other_app.png](media/document/diffrence%20about%20other%20app.png)
+> ![diffrence_about_other_app.png](media/document/diffrence_about_other_app.png)
 >1. Fitbod
 >- AI 기반으로 근력 운동 중심 맞춤 루틴 제공
 >- 일부 운동 기록 시각화 가능, 식단 관리 제한적
@@ -55,7 +55,7 @@
 ---
 
 # 개발 환경 및 기술 스택
-> ![Development_Environment.png](media/document/Development%20Environment.png)
+> ![Development_Environment.png](media/document/Development_Environment.png)
 
 ---
 
@@ -71,8 +71,9 @@
 
 # 요구 사항 명세서
 > [스프레드시트링크](https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing)
-  ![Requirement_Specification-1.png](media/document/Requirement%20Specification-1.png)
-  ![Requirement_Specification-2.png](media/document/Requirement%20Specification-2.png)
+  ![Requirement_Specification-1.png](media/document/Requirement_Specification-1.png)
+  ![Requirement_Specification-2.png](media/document/Requirement_Specification-2.png)
+
 ---
 
 # ERD
@@ -82,8 +83,8 @@
 
 # 테이블 정의서
 > [테이블정의서링크](https://docs.google.com/spreadsheets/d/e/2PACX-1vSUihJ3aSfDu0rVzV-4FhAjKm-BtCdu7y4hJH0xDAdmlthM-6afHdqh1hZB_P44VHvBKn4FqTCBoGjV/pubhtml)
-> ![Table_Definition-2.png](media/document/Table%20Definition-2.png)
-  ![Table_Definition-1.png](media/document/Table%20Definition-1.png)
+> ![Table_Definition-1.png](media/document/Table_Definition-1.png)
+  ![Table_Definition-2.png](media/document/Table_Definition-2.png)
 ---
 
 # 백업 계획
