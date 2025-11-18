@@ -1,32 +1,91 @@
 # be22-1st-team3-project
 
 - 프로젝트 간단 소개
-> 헬스하는 사람들을 위한 관리 서비스를 개발하고 있습니다.
+> **운동인들을 위한 통합 관리 시스템.**
+> ![IIM_logo.jpg](media/document/IIM_logo.jpg)
+---
+
 - 팀 소개
-> 조민규, 정현호, 김선일, 최현지
+> - 조민규 
+> - 정현호
+> - 김선일
+> - 최현지
+
+---
+
 - 프로젝트 개요(주제 소개, 선정 이유(배경/필요성))
-> 헬스케어
-> 오늘날 각광받는 헬스케어
-> 웹에서 식단관리, 루틴관리, 채팅을 통합해서 제공하는 플랫폼은 없음.
-> 이를 제공해서 헬스하는 사람들에게 편의성을 제공하자.
+> - IIM(Insert Into Muscle)은 개인 맞춤형 운동, 식단, 통증 관리를 통합한 웹앱 플랫폼입니다.
+> - 사용자는 자신의 건강 상태와 운동 데이터를 기반으로 AI 맞춤 루틴과 식단을 추천받고, 진행 상황을 시각화할 수 있습니다.
+> - 기존 앱들이 한 가지 기능에 집중한 반면, IIM은 운동, 식단, 부상 관리, 데이터 시각화, 커뮤니티까지 한 번에 제공합니다.
+> - 통합 관리와 맞춤형 솔루션을 통해 사용자의 운동 효과를 극대화하고 부상 위험을 최소화합니다.
+> - 이를 통해 개인 맞춤형 건강 관리 생태계를 구축하고 지속적인 운동 습관 형성을 지원합니다.
+---
+
 - 유사 서비스 + 차이점 or 개선점
-> 조사 필요
+> ![diffrence about other app.png](media/document/diffrence%20about%20other%20app.png)
+>1. Fitbod
+>- AI 기반으로 근력 운동 중심 맞춤 루틴 제공
+>- 일부 운동 기록 시각화 가능, 식단 관리 제한적
+>2. Freeletics
+>- AI 코치 기반 전신/체중 운동 맞춤 제공
+>- 코치/유저 중심 커뮤니티 제공, 식단 가이드 제한적
+>3. IIM (this project)
+>- 통증 설문 기반 맞춤 루틴과 영양소·영양제 관리까지 한 번에 제공
+>- 달성률 색상 시각화, 운동량·진단 변화 차트로 직관적 관리 가능
+>- 그룹 채팅, 루틴 공유, AI 챗봇 등으로 사용자 경험과 참여도 극대화
+
+
+---
+
 - 서비스 대상
-> 헬스하는 사람들
+> 서비스 대상은 체계적인 운동·식단 관리와 통증 관리를 원하는 초보~중급 운동 사용자와, 건강 기록을 한 앱에서 통합 관리하려는 모든 사람입니다.
+
+---
+
 - 주요 기능
-> 식단관리, 루틴관리, 부상 자가진단, 사용자 채팅, 챗봇
+
+| 구분                        | 주요 기능                                                        |
+|-----------------------------|----------------------------------------------------------------|
+| **회원 관리**                | 회원가입/로그인, 프로필 수정, 관리자 통계 관리                  |
+| **운동 루틴 & 가이드**       | 맞춤 루틴 추천, 운동 기록, 루틴 관리, 운동 영상/북마크          |
+| **통증·진단**               | 통증 설문, 진단 결과 제공, 변화 히스토리 확인                   |
+| **데이터 시각화 & 캘린더**   | 달성률·운동량 차트, 기간별/운동별 필터, 루틴 일정 관리         |
+| **커뮤니티 & 식단**          | 채팅·루틴 공유, 비속어 필터, 식단 기록·추천·영양제 안내       |
+
+---
+
 - 개발 환경 및 기술 스택
-> MariaDB, DataGrip, GitHub
+> ![Development Environment.png](media/document/Development%20Environment.png)
+
+---
+
 - WBS
-> ??
+> ![WBS.png](media/document/WBS.png)
+
+---
+
 - Usecase Diagram (이미지 캡쳐)
 > ![usecase](media/assets/team3_usecase.png)
-- 요구 사항 명세서 (이미지 또는 전체 공개된 url)
-> https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing
+
+---
+
+- 요구 사항 명세서
+> [스프레드시트링크](https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing)
+  ![Requirement Specification-1.png](media/document/Requirement%20Specification-1.png)
+  ![Requirement Specification-2.png](media/document/Requirement%20Specification-2.png)
+---
+
 - ERD (이미지)
 > ![ERD](media/assets/team3_erd_final.png)
-- 테이블 정의서(이미지 또는 전체 공개된 url)
-> 작업 필요
+
+---
+
+- 테이블 정의서
+> [테이블정의서링크](https://docs.google.com/spreadsheets/d/e/2PACX-1vSUihJ3aSfDu0rVzV-4FhAjKm-BtCdu7y4hJH0xDAdmlthM-6afHdqh1hZB_P44VHvBKn4FqTCBoGjV/pubhtml)
+> ![Table Definition-2.png](media/document/Table%20Definition-2.png)
+  ![Table Definition-1.png](media/document/Table%20Definition-1.png)
+---
+
 - 백업 계획
 >   ![0replica_desc.png](media/backupSequence/0replica_desc.png)
 >  - DB를 복제하여 2대 이상의 DBMS를 master와 slave 구조로 비동기 방식으로 데이터를 저장할 계획
@@ -59,12 +118,16 @@
 >7. 아래 insert 구문을 master에 넣어보자
   ![9insert_sample_user.png](media/backupSequence/9insert_sample_user.png)
   ![9test_replica_insert.gif](media/backupSequence/9test_replica_insert.gif)
-- Binary Log
 
+
+---
 
 - 테스트케이스
     - 시나리오별 SQL 및 실행 결과
 > 작업 필요
+
+---
+
 - 프로젝트 회고
 > 조민규 :
 > 정현호 :
