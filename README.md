@@ -64,7 +64,7 @@
 
 ---
 
-- Usecase Diagram (이미지 캡쳐)
+- Usecase Diagram
 > ![usecase](media/assets/team3_usecase.png)
 
 ---
@@ -75,7 +75,7 @@
   ![Requirement Specification-2.png](media/document/Requirement%20Specification-2.png)
 ---
 
-- ERD (이미지)
+- ERD
 > ![ERD](media/assets/team3_erd_final.png)
 
 ---
