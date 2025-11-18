@@ -17,13 +17,13 @@ SELECT * FROM mem WHERE user_id = 'userA' AND user_pw = 'pw1';
 -- 3) 마이페이지로 이동하여 닉네임을 '운동초보A'로 변경
 UPDATE Mem
 SET user_nickname ='운동초보A'
-where user_num = 34;
+where user_num = 37;
 
 -- 4)회원탈퇴(회원 탈퇴 진행)
 --      (0) 회원 탈퇴
-DELETE FROM Mem WHERE user_num = 36 ;
+DELETE FROM Mem WHERE user_num = 37 ;
 --      (1) 회원 탈퇴 확인
-SELECT * FROM mem;
+SELECT * FROM mem WHERE user_num = 37;
 
 #2 관리자 운동 가이드 생성
 -- 관리자 계정으로 관리자 페이지에 로그인
@@ -34,7 +34,7 @@ VALUES ('admin1',
         '관리자1');
 
 -- 2) 관리자 확인
-SELECT * FROM adm;
+SELECT * FROM adm WHERE adm_id ='admin1';
 
 -- 3)콘텐츠 관리 초보자용 운동 가이드 등록
 INSERT INTO ExerciseGuide (adm_no, guide_title, guide_video, guide_image, guide_des, guide_date, ex_num)
@@ -65,6 +65,7 @@ values ('gusgh',
         '010-9355-7976',
         160,
         80);
+
 --      (1) 로그인
 select count(*)
 from mem

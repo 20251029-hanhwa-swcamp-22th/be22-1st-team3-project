@@ -1,0 +1,45 @@
+#  8. 그룹 채팅
+
+    -- 테스트용 사용자 변수
+SET @userA = 6;   -- 사용자 A
+SET @userB = 7;   -- 사용자 B
+
+#   (1) 채팅방 생성
+INSERT INTO Gct (room_master, room_name, room_open_date)
+VALUES (@userA, '무릎 통증 환우회', NOW());
+
+SET @room_num = LAST_INSERT_ID();
+
+
+
+#   (2) 채팅방 참여자 등록 (A: 방장)
+INSERT INTO GctPtc (room_num, user_num)
+VALUES (@room_num, @userA);
+
+
+#   (3) 사용자 B 초대
+INSERT INTO GctPtc (room_num, user_num)
+VALUES (@room_num, @userB);
+
+
+
+#   (4) 사용자 A 메시지 전송
+INSERT INTO Msg (msg_content, msg_time, room_num, user_num)
+VALUES ('오늘 스쿼트했더니 무릎이 아프네요', NOW(), @room_num, @userA);
+
+SET @msg_num = LAST_INSERT_ID();
+
+
+
+#   (5) 신고 (A가 B가 보낸 메시지를 신고했다고 가정)
+
+INSERT INTO Report (rpt_time, rpt_reason, msg_num, good_num)
+VALUES (NOW(), '부적절한 메시지 전송', @msg_num, @userA);
+
+
+
+#   (6) 사용자 A 채팅방 나가기
+
+DELETE FROM GctPtc
+WHERE room_num = @room_num
+  AND user_num = @userA;
