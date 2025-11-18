@@ -1,11 +1,11 @@
 # be22-1st-team3-project
 
-- 프로젝트 간단 소개
+# 프로젝트 간단 소개
 > **운동인들을 위한 통합 관리 시스템.**
 > ![IIM_logo.jpg](media/document/IIM_logo.jpg)
 ---
 
-- 팀 소개
+# 팀 소개
 > - 조민규 
 > - 정현호
 > - 김선일
@@ -13,7 +13,7 @@
 
 ---
 
-- 프로젝트 개요(주제 소개, 선정 이유(배경/필요성))
+# 프로젝트 개요(주제 소개, 선정 이유(배경/필요성))
 > - IIM(Insert Into Muscle)은 개인 맞춤형 운동, 식단, 통증 관리를 통합한 웹앱 플랫폼입니다.
 > - 사용자는 자신의 건강 상태와 운동 데이터를 기반으로 AI 맞춤 루틴과 식단을 추천받고, 진행 상황을 시각화할 수 있습니다.
 > - 기존 앱들이 한 가지 기능에 집중한 반면, IIM은 운동, 식단, 부상 관리, 데이터 시각화, 커뮤니티까지 한 번에 제공합니다.
@@ -21,7 +21,7 @@
 > - 이를 통해 개인 맞춤형 건강 관리 생태계를 구축하고 지속적인 운동 습관 형성을 지원합니다.
 ---
 
-- 유사 서비스 + 차이점 or 개선점
+# 유사 서비스 + 차이점 or 개선점
 > ![diffrence about other app.png](media/document/diffrence%20about%20other%20app.png)
 >1. Fitbod
 >- AI 기반으로 근력 운동 중심 맞춤 루틴 제공
@@ -37,12 +37,12 @@
 
 ---
 
-- 서비스 대상
+# 서비스 대상
 > 서비스 대상은 체계적인 운동·식단 관리와 통증 관리를 원하는 초보~중급 운동 사용자와, 건강 기록을 한 앱에서 통합 관리하려는 모든 사람입니다.
 
 ---
 
-- 주요 기능
+# 주요 기능
 
 | 구분                        | 주요 기능                                                        |
 |-----------------------------|----------------------------------------------------------------|
@@ -54,39 +54,39 @@
 
 ---
 
-- 개발 환경 및 기술 스택
+# 개발 환경 및 기술 스택
 > ![Development Environment.png](media/document/Development%20Environment.png)
 
 ---
 
-- WBS
+# WBS
 > ![WBS.png](media/document/WBS.png)
 
 ---
 
-- Usecase Diagram
+# Usecase Diagram
 > ![usecase](media/assets/team3_usecase.png)
 
 ---
 
-- 요구 사항 명세서
+# 요구 사항 명세서
 > [스프레드시트링크](https://docs.google.com/spreadsheets/d/12OZN1IK60Vbln3Dilq4HbBGqqMuhrMATIU-cgW7zIg8/edit?usp=sharing)
   ![Requirement Specification-1.png](media/document/Requirement%20Specification-1.png)
   ![Requirement Specification-2.png](media/document/Requirement%20Specification-2.png)
 ---
 
-- ERD
+# ERD
 > ![ERD](media/assets/team3_erd_final.png)
 
 ---
 
-- 테이블 정의서
+# 테이블 정의서
 > [테이블정의서링크](https://docs.google.com/spreadsheets/d/e/2PACX-1vSUihJ3aSfDu0rVzV-4FhAjKm-BtCdu7y4hJH0xDAdmlthM-6afHdqh1hZB_P44VHvBKn4FqTCBoGjV/pubhtml)
 > ![Table Definition-2.png](media/document/Table%20Definition-2.png)
   ![Table Definition-1.png](media/document/Table%20Definition-1.png)
 ---
 
-- 백업 계획
+# 백업 계획
 >   ![0replica_desc.png](media/backupSequence/0replica_desc.png)
 >  - DB를 복제하여 2대 이상의 DBMS를 master와 slave 구조로 비동기 방식으로 데이터를 저장할 계획
     
@@ -97,7 +97,7 @@
 >     2. Ubuntu OS
 >     3. MariaDB
 
->- backup  연결 확인
+## backup check sequence
 >1. master ubuntu에서 master계정 접속
  ![1login_master.png](media/backupSequence/1login_master.png)
 >  - slave ubuntu에서 slave계정 접속
@@ -122,13 +122,13 @@
 
 ---
 
-- 테스트케이스
+# 테스트케이스
     - 시나리오별 SQL 및 실행 결과
 > 작업 필요
 
 ---
 
-- 프로젝트 회고
+# 프로젝트 회고
 > 조민규 :
 > 정현호 :
 > 김선일 :
