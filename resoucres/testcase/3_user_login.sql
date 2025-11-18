@@ -30,7 +30,8 @@ VALUES (1,
 SELECT *
 FROM exerciseguide
 WHERE guide_title LIKE '%울끈불끈%';
-
+DELETE FROM exerciseguide
+WHERE guide_num =6;
 -- 3) 운동 가이드 북마크 - guide_title이 울끈불끈 가슴만들기 AND user_id가 gusgh
 INSERT INTO guidebookmark(guide_num, user_num)
 VALUES ((SELECT guide_num FROM exerciseguide WHERE guide_title LIKE '%울끈불끈%' LIMIT 1),
